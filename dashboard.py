@@ -6,6 +6,7 @@ import joblib
 
 # Load dataset and model
 df = pd.read_csv("AI_Impact_on_Jobs_2030.csv")
+print(df.cplumns)
 model = joblib.load("best_model.pkl")
 
 st.title("AI Impacts on Jobs 2030 Dashboard")
