@@ -41,6 +41,9 @@ st.subheader("Predict Future Salary")
 years_exp = st.slider("Years of Experience", 0, 40, 5)
 
 # --- Predictive Output ---
+import joblib
+model = joblib.load("best_model.pkl")
+
 if st.button("Run Prediction"):
     input_data = pd.DataFrame([[years_exp]], columns=['years_experience'])
     prediction = model.predict(input_data)[0]
